@@ -25,9 +25,10 @@ RUN pip install --no-cache-dir -r requirements.txt
  
 # Copy the Django project to the container
 COPY . /app/
+
+
  
 # Expose the Django port
 EXPOSE 8000
  
-# Run Django’s development server
 CMD ["gunicorn", "--workers=3", "--bind", "unix:/app/gunicorn_socket/gunicorn.sock", "courseapp.wsgi:application"]

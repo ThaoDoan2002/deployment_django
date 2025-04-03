@@ -60,7 +60,7 @@ def upload_video_to_s3(file_path, filename, video_instance_id):
         # Gửi email cho admin
         send_mail(
             subject='Video đã tải lên',
-            message=f'"{video_instance.name}"',
+            message=f'Login to seen uploaded',
             from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[settings.ADMIN_EMAIL],  # Địa chỉ email của admin
             fail_silently=False,
